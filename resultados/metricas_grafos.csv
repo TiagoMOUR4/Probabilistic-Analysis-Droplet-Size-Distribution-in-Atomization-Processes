@@ -1,0 +1,5 @@
+"grafo","nos","arestas","bic_cg","situacao","loglik_cg"
+"G1",10,25,NA,"ajuste insuficiente",NA
+"G2",10,11,-85197.6492772862,"BIC calculado",-82890.9800468093
+"G3",10,9,-90744.1747259873,"BIC calculado",-89121.3923527874
+"G4",10,13,-87143.9728617568,"BIC calculado",-84806.393490838

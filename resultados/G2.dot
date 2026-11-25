@@ -1,0 +1,26 @@
+digraph G2 {
+rankdir=LR;
+graph [pad=0.03];
+node [shape=circle, style=rounded];
+"Nozzle";
+"Orifice";
+"Airspeed";
+"Pressure";
+"Orientation";
+"DV10";
+"DV50";
+"DV90";
+"Less100";
+"Less200";
+"DV10" -> "DV50";
+"DV50" -> "DV90";
+"Nozzle" -> "Orifice";
+"Less200" -> "DV10";
+"Nozzle" -> "DV10";
+"Orifice" -> "Less200";
+"Orifice" -> "DV50";
+"Nozzle" -> "DV90";
+"Orientation" -> "Less100";
+"Airspeed" -> "Less100";
+"Less100" -> "Less200";
+}

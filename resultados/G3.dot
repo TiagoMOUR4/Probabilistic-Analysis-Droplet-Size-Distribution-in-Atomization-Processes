@@ -1,0 +1,28 @@
+digraph G3 {
+rankdir=LR;
+graph [pad=0.03];
+node [shape=circle, style=rounded];
+"Nozzle";
+"Orifice";
+"Airspeed";
+"Pressure";
+"Orientation";
+"DV10";
+"DV50";
+"DV90";
+"Less100";
+"Less200";
+subgraph cluster_geometria { label="Geometria"; style=rounded; color="#94A3B8"; "Nozzle"; "Orifice"; "Orientation"; }
+subgraph cluster_operacao { label="Operacao"; style=rounded; color="#94A3B8"; "Airspeed"; "Pressure"; }
+subgraph cluster_dv { label="Distribuicao DV"; style=rounded; color="#94A3B8"; "DV10"; "DV50"; "DV90"; }
+subgraph cluster_less { label="Variaveis Less"; style=rounded; color="#94A3B8"; "Less100"; "Less200"; }
+"Nozzle" -> "Orifice";
+"Airspeed" -> "Pressure";
+"Orientation" -> "Pressure";
+"DV10" -> "DV50";
+"DV50" -> "DV90";
+"Less100" -> "Less200";
+"Orifice" -> "DV10";
+"Pressure" -> "Less100";
+"DV10" -> "Less100";
+}
